@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.polytech.cluedo" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AccusedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DiceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EndGameActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MovedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ProfilActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReceiveCardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ShortcutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SuppositionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WaitingDiceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WaitingLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WaitingMoveActivity"
+            android:label="@string/title_activity_move" >
+        </activity>
+        <activity
+            android:name=".WaitingPionsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WaitingSuppositionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReceiveNoCardActivity"
+            android:label="@string/title_activity_receive_no_card" >
+        </activity>
+        <activity
+            android:name=".WaitShortCutActivity"
+            android:label="@string/title_activity_wait_short_cut" >
+        </activity>
+        <activity
+            android:name=".LostEndGameActivity"
+            android:label="@string/title_activity_lost_end_game" >
+        </activity>
+    </application>
+
+</manifest>

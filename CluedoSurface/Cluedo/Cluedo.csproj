@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D1D8CFB-591E-4F26-B26B-964353360EBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cluedo</RootNamespace>
+    <AssemblyName>Cluedo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, PublicKeyToken=e8a75d24b142be49, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.Surface" />
+    <Reference Include="Microsoft.Surface.Presentation" />
+    <Reference Include="Microsoft.Surface.Presentation.Generic" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sounds.cs" />
+    <Page Include="InitPion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindowCluedo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InitPion.xaml.cs">
+      <DependentUpon>InitPion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowCluedo.xaml.cs">
+      <DependentUpon>MainWindowCluedo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SocketIO.cs" />
+    <Page Include="Resources\GlassButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\X.png" />
+    <Resource Include="Resources\personHead\leblanc.jpg" />
+    <Resource Include="Resources\personHead\moutarde.jpg" />
+    <Resource Include="Resources\personHead\olive.jpg" />
+    <Resource Include="Resources\personHead\pervenche.jpg" />
+    <Resource Include="Resources\personHead\rose.jpg" />
+    <Resource Include="Resources\personHead\violet.jpg" />
+    <Resource Include="Resources\armCard\barredefer.png" />
+    <Resource Include="Resources\armCard\chandelier.png" />
+    <Resource Include="Resources\armCard\cleanglaise.png" />
+    <Resource Include="Resources\armCard\corde.png" />
+    <Resource Include="Resources\armCard\poignard.png" />
+    <Resource Include="Resources\armCard\revolver.png" />
+    <Resource Include="Resources\dos.png" />
+    <Resource Include="Resources\personCard\leblanc.png" />
+    <Resource Include="Resources\personCard\moutarde.png" />
+    <Resource Include="Resources\personCard\olive.png" />
+    <Resource Include="Resources\personCard\pervenche.png" />
+    <Resource Include="Resources\personCard\rose.png" />
+    <Resource Include="Resources\personCard\violet.png" />
+    <Resource Include="Resources\pieceCard\bureau.png" />
+    <Resource Include="Resources\pieceCard\chambre.png" />
+    <Resource Include="Resources\pieceCard\cuisine.png" />
+    <Resource Include="Resources\pieceCard\entree.png" />
+    <Resource Include="Resources\pieceCard\garage.png" />
+    <Resource Include="Resources\pieceCard\salleamanger.png" />
+    <Resource Include="Resources\pieceCard\salledebains.png" />
+    <Resource Include="Resources\pieceCard\salledejeux.png" />
+    <Resource Include="Resources\pieceCard\salon.png" />
+    <Resource Include="Resources\dices\10.png" />
+    <Resource Include="Resources\dices\11.png" />
+    <Resource Include="Resources\dices\12.png" />
+    <Resource Include="Resources\dices\2.png" />
+    <Resource Include="Resources\dices\3.png" />
+    <Resource Include="Resources\dices\4.png" />
+    <Resource Include="Resources\dices\6.png" />
+    <Resource Include="Resources\dices\7.png" />
+    <Resource Include="Resources\dices\8.png" />
+    <Resource Include="Resources\dices\9.png" />
+    <Resource Include="Resources\guessCard\arm.png" />
+    <Resource Include="Resources\guessCard\dos.png" />
+    <Resource Include="Resources\guessCard\person.png" />
+    <Resource Include="Resources\guessCard\piece.png" />
+    <Resource Include="Resources\knowRules.jpg" />
+    <Resource Include="Resources\rules\a.jpg" />
+    <Resource Include="Resources\rules\b.jpg" />
+    <Resource Include="Resources\rules\c.jpg" />
+    <Resource Include="Resources\rules\d.jpg" />
+    <Resource Include="Resources\rules\e.jpg" />
+    <Resource Include="Resources\rules\f.jpg" />
+    <Resource Include="Resources\rules\g.jpg" />
+    <Resource Include="Resources\dices\5.png" />
+    <Resource Include="Resources\bg.jpg" />
+    <Content Include="Resources\armePose.wav" />
+    <Resource Include="Resources\dices\0.png" />
+    <Content Include="Resources\lanceSupposition.wav" />
+    <Content Include="Resources\personnagePose.wav" />
+    <Resource Include="Resources\pieces\bureau.png" />
+    <Resource Include="Resources\pieces\chambre.png" />
+    <Resource Include="Resources\pieces\cuisine.png" />
+    <Resource Include="Resources\pieces\entree.png" />
+    <Resource Include="Resources\pieces\garage.png" />
+    <Resource Include="Resources\pieces\rectangle.png" />
+    <Resource Include="Resources\pieces\salleDeJeux.png" />
+    <Resource Include="Resources\pieces\salleManger.png" />
+    <Resource Include="Resources\pieces\salon.png" />
+    <Resource Include="Resources\pieces\toChambre.png" />
+    <Resource Include="Resources\pieces\toCuisine.png" />
+    <Resource Include="Resources\pieces\toGarage.png" />
+    <Resource Include="Resources\pieces\toSalon.png" />
+    <Resource Include="Resources\pieces\salleDeBain.png" />
+    <Content Include="Resources\start.wav" />
+    <Resource Include="Resources\plateau.png" />
+    <Resource Include="Resources\castle.jpg" />
+    <Resource Include="Resources\frame.png" />
+    <Resource Include="Resources\icon2.png" />
+    <Resource Include="Resources\start.png" />
+    <Resource Include="Resources\persons\blanc.jpg" />
+    <Resource Include="Resources\persons\moutarde.jpg" />
+    <Resource Include="Resources\persons\olive.jpg" />
+    <Resource Include="Resources\persons\pervenche.jpg" />
+    <Resource Include="Resources\persons\rose.jpg" />
+    <Resource Include="Resources\persons\violet.jpg" />
+    <Resource Include="Resources\cluedo.jpg" />
+    <Content Include="Cluedo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="SocketIO\SocketIOClient.csproj">
+      <Project>{352C9BC1-F74C-4741-A09D-7227BC60C057}</Project>
+      <Name>SocketIOClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
